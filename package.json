@@ -1,15 +1,15 @@
 {
-  "name": "--libraryname--",
+  "name": "testlib",
   "version": "0.0.0",
   "description": "",
   "keywords": [],
-  "main": "dist/--libraryname--.umd.js",
-  "module": "dist/--libraryname--.es5.js",
-  "typings": "dist/types/--libraryname--.d.ts",
+  "main": "dist/testlib.umd.js",
+  "module": "dist/testlib.es5.js",
+  "typings": "dist/types/testlib.d.ts",
   "files": [
     "dist"
   ],
-  "author": "--username-- <--usermail-->",
+  "author": "Jon Wallsten <jon.wallsten@gmail.com>",
   "repository": {
     "type": "git",
     "url": ""
@@ -32,7 +32,7 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
     "precommit": "lint-staged",
-    "postinstall": "ts-node tools/init"
+    "serve": "serve -p 8080 ./"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
@@ -104,5 +104,8 @@
     "typedoc": "^0.10.0",
     "typescript": "^2.6.2",
     "validate-commit-msg": "^2.12.2"
+  },
+  "dependencies": {
+    "serve": "^6.4.9"
   }
 }
