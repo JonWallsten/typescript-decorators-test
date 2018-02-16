@@ -1,4 +1,4 @@
-export type $oas = {
+export type injectedProps = {
   type: string
   parent: object
 }

@@ -1,13 +1,13 @@
-import { configurable, enumerable, injectOas, writable } from './decorators'
-import { $oas } from './types';
+import { configurable, enumerable, injectProps, writable } from './decorators'
+import { injectedProps } from './types';
 
-@injectOas
+@injectProps
 export class Test {
   @enumerable(false)
   @writable(false)
   @configurable(false)
   public prop: string = 'Test'
-  public $oas: $oas;
+  public injectedProps: injectedProps;
 
   constructor() {
     console.log('Constructor: ', this);

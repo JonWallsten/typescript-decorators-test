@@ -1,7 +1,7 @@
-import { $oas } from './types';
+import { injectedProps } from './types';
 
-export const injectOas = (constructor: Function) => {
-  (constructor.prototype.$oas as $oas) = {
+export const injectProps = (constructor: Function) => {
+  (constructor.prototype.injectedProps as injectedProps) = {
     type: 'testtype',
     parent: {}
   }
